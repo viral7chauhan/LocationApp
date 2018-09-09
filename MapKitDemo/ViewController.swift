@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         checkDeviceLevelPermission()
     }
 
+    
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion(center: location, latitudinalMeters: regionAreaInMeter, longitudinalMeters: regionAreaInMeter)
@@ -29,9 +30,11 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func setupLocationManager() {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
+    
     
     func checkDeviceLevelPermission() {
         if CLLocationManager.locationServicesEnabled() {
@@ -45,11 +48,13 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func checkAuthorizationPermission() {
         switch CLLocationManager.authorizationStatus() {
             case .authorizedWhenInUse:
                 mapView.showsUserLocation = true
                 locationManager.startUpdatingLocation()
+                centerViewOnUserLocation()
             break
             case .authorizedAlways:
                 break

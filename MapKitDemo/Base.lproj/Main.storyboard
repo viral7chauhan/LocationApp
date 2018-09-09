@@ -17,19 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="He3-M0-7aI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="He3-M0-7aI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="CUy-aW-gfO"/>
                                 </connections>
                             </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="adW-Vq-SBi">
+                                <rect key="frame" x="167.66666666666666" y="366" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ckt-Zr-C3y"/>
+                                    <constraint firstAttribute="width" constant="40" id="cIl-Pf-uHS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FU-v2-5jd">
+                                <rect key="frame" x="0.0" y="728" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9ZH-9q-lJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="He3-M0-7aI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Yl-Tn-24F"/>
-                            <constraint firstAttribute="bottom" secondItem="He3-M0-7aI" secondAttribute="bottom" id="Hfb-eG-y8w"/>
+                            <constraint firstItem="adW-Vq-SBi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ex3-NX-3Rd"/>
+                            <constraint firstItem="adW-Vq-SBi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="MdG-5C-kgQ"/>
                             <constraint firstAttribute="trailing" secondItem="He3-M0-7aI" secondAttribute="trailing" id="Z5g-x0-Hxr"/>
                             <constraint firstItem="He3-M0-7aI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ctC-3g-9Di"/>
+                            <constraint firstItem="He3-M0-7aI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="e55-Dw-Dwh"/>
+                            <constraint firstItem="1FU-v2-5jd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gJN-Cb-frU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1FU-v2-5jd" secondAttribute="trailing" id="gbO-C6-AwV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1FU-v2-5jd" secondAttribute="bottom" id="rFL-kh-qez"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,4 +64,7 @@
             <point key="canvasLocation" x="-98.400000000000006" y="117.48768472906404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin" width="96" height="96"/>
+    </resources>
 </document>
